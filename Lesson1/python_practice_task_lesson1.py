@@ -23,7 +23,7 @@ print(title)
 
     # Full name including title
     # First and Last name are seperate variables
-    # Title included
+    # Title is included
     # Height is in metres
     # Adress stored in street number and street
     # Country is not reqiured
