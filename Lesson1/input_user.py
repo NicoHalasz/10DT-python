@@ -4,7 +4,10 @@
 # input() function
 
 # Taking input from the user
-string = input()
+# string = input()
 
 # Output
-print()
+# print()
+
+# name = input("Enter your name: ")
+# print(name)
