@@ -24,6 +24,6 @@
 # print(add)
 
 # Taking input from user as list
-li = list(input("Enter a number: "))
+# li = list(input("Enter a number: "))
 # Output
-print(li)
+# print(li)
