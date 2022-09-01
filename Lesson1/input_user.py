@@ -5,7 +5,6 @@
 
 # Taking input from the user
 # string = input()
-
 # Output
 # print()
 
@@ -19,7 +18,12 @@
 # print(add)
 
 # Taking input from a user as a float
-num = float(input("Enter a number: "))
-add = num + 2
+# num = float(input("Enter a number: "))
+# add = num + 1
 # Output
-print(add)
+# print(add)
+
+# Taking input from user as list
+li = list(input("Enter a number: "))
+# Output
+print(li)
