@@ -1,15 +1,20 @@
 # N L Halasz
 # Input - various types by user
 
-# input() function
-
 # Taking input from the user
 # string = input()
 # Output
-# print()
+# print(string)
 
+# Taking input from the user
 # name = input("Enter your name: ")
+# Output
 # print(name)
+
+# Taking input from the user
+# name = input("Enter your name: ")
+# Output
+# print("Hello,",name,".")
 
 # Taking input from the user as integer
 # num = int(input("Enter a number: "))
