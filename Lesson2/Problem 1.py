@@ -1,5 +1,5 @@
 # Nico Halasz
-
+# Calculation of variables, framing of labels, data in context
 
 # Problem 01
 # This program is designed to track and total goals scored by the RC first XI for each game played.
