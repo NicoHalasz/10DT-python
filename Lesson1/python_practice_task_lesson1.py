@@ -1,4 +1,4 @@
-# N L Halasz
+# Nico Halasz
 # Variables, output, labels, data tpes
 
 # Variable declaration

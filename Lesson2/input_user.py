@@ -1,4 +1,4 @@
-# N L Halasz
+# Nico Halasz
 # Input - various types by user
 
 # Taking input from the user
