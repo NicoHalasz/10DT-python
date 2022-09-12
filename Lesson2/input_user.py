@@ -2,9 +2,9 @@
 # Input - various types by user
 
 # Taking input from the user
-# string = input()
+string = input()
 # Output
-# print(string)
+print(string)
 
 # Taking input from the user
 # name = input("Enter your name: ")
