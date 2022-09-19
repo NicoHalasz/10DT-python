@@ -7,14 +7,41 @@
 
 from tkinter import * # import the tkinter library
 
-def button_press(num):
-    pass
+def button_press(num):   # defining each button press
+    global equation_text
 
-def equals():
-    pass
+    equation_text = equation_text + str(num)
 
-def clear():
-    pass
+    equation_label.set(equation_text)
+
+def equals():   # this block checks for the button_press(equals)
+    
+    global equation_text
+
+    try:  # try is used in try...expect blocks. It defines a block of ode test if it contains any errors.
+          # You can define different blocks for different errpr types, and blocks to execute if nothing went wrong.
+        total = str(eval(equation_text))
+
+        equation_label.set(total)
+
+        equation_text = total
+
+    except SyntaxError: # Check for syntax error
+
+        equation_text.set("syntax error")
+
+        equation_text = ""
+
+    except ZeroDivisionError:   # Check for division by zero
+
+        equation_label.set("arithmetic error")
+
+        equation_text = ""
+
+def clear(): # Clears the equation_label for the next calculation
+    global equation_label
+
+    equation_label.set("")
 
 window = Tk()
 window.title("Python Calculator")
