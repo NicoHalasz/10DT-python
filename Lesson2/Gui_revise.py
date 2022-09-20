@@ -5,7 +5,8 @@
 # Python Calculator with GUI (Graphic User Interface)
 # ***************************************************
 
-from tkinter import * # import the tkinter library
+from tkinter import *
+from turtle import color # import the tkinter library
 
 def button_press(num):   # defining each button press
     global equation_text
@@ -42,6 +43,7 @@ def clear(): # Clears the equation_label for the next calculation
     global equation_label
 
     equation_label.set("")
+    equation_text= ""
 
 window = Tk()
 window.title("Python Calculator")
