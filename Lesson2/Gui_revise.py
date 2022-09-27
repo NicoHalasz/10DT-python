@@ -49,14 +49,14 @@ def clear(): # Clears the equation_label for the next calculation
 
 window = Tk()
 window.title("Python Calculator")
-window.geometry("500x500")
-window.configure(bg="light grey")
+window.geometry("400x500")
+window.configure(bg="royalblue4")
 
 equation_text = ""
 
 equation_label = StringVar()
 
-label = Label(window, textvariable=equation_label, font=('console', 20), bg="white", width=24, height=2)
+label = Label(window, textvariable=equation_label, font=('console', 20), bg="springgreen3", width=23, height=2)
 label.pack()
 
 frame = Frame(window)
@@ -64,63 +64,63 @@ frame.pack()
 
 # create the buttons (0 - 9)
 
-button1 = Button(frame, text=1, height=4, width=9, font=35, bg="cyan", command=lambda: button_press(1))
+button1 = Button(frame, text=1, height=4, width=9, font=35, bg="cyan", activebackground="cadetblue1", command=lambda: button_press(1))
 button1.grid(row=0, column=0)
 
-button2 = Button(frame, text=2, height=4, width=9, font=35, bg="cyan", command=lambda: button_press(2))
+button2 = Button(frame, text=2, height=4, width=9, font=35, bg="cyan", activebackground="cadetblue1", command=lambda: button_press(2))
 button2.grid(row=0, column=1)
 
-button3 = Button(frame, text=3, height=4, width=9, font=35, bg="cyan", command=lambda: button_press(3))
+button3 = Button(frame, text=3, height=4, width=9, font=35, bg="cyan", activebackground="cadetblue1", command=lambda: button_press(3))
 button3.grid(row=0, column=2)
 
-button4 = Button(frame, text=4, height=4, width=9, font=35, bg="cyan", command=lambda: button_press(4))
+button4 = Button(frame, text=4, height=4, width=9, font=35, bg="cyan", activebackground="cadetblue1", command=lambda: button_press(4))
 button4.grid(row=1, column=0)
 
-button5 = Button(frame, text=5, height=4, width=9, font=35, bg="cyan", command=lambda: button_press(5))
+button5 = Button(frame, text=5, height=4, width=9, font=35, bg="cyan", activebackground="cadetblue1", command=lambda: button_press(5))
 button5.grid(row=1, column=1)
 
-button6 = Button(frame, text=6, height=4, width=9, font=35, bg="cyan", command=lambda: button_press(6))
+button6 = Button(frame, text=6, height=4, width=9, font=35, bg="cyan", activebackground="cadetblue1", command=lambda: button_press(6))
 button6.grid(row=1, column=2)
 
-button7 = Button(frame, text=7, height=4, width=9, font=35, bg="cyan", command=lambda: button_press(7))
+button7 = Button(frame, text=7, height=4, width=9, font=35, bg="cyan", activebackground="cadetblue1", command=lambda: button_press(7))
 button7.grid(row=2, column=0)
 
-button8 = Button(frame, text=8, height=4, width=9, font=35, bg="cyan", command=lambda: button_press(8))
+button8 = Button(frame, text=8, height=4, width=9, font=35, bg="cyan", activebackground="cadetblue1", command=lambda: button_press(8))
 button8.grid(row=2, column=1)
 
-button9 = Button(frame, text=9, height=4, width=9, font=35, bg="cyan", command=lambda: button_press(9))
+button9 = Button(frame, text=9, height=4, width=9, font=35, bg="cyan", activebackground="cadetblue1", command=lambda: button_press(9))
 button9.grid(row=2, column=2)
 
-button0 = Button(frame, text=0, height=4, width=9, font=35, bg="cyan", command=lambda: button_press(0))
+button0 = Button(frame, text=0, height=4, width=9, font=35, bg="cyan", activebackground="cadetblue1", command=lambda: button_press(0))
 button0.grid(row=3, column=0)
 
 # create the operation buttons
 
-plus = Button(frame, text='+', height=4, width=9, font=35, command=lambda: button_press('+'))
+plus = Button(frame, text='+', height=4, width=9, font=35, bg="yellow2", command=lambda: button_press('+'))
 plus.grid(row=1, column=3)
 
-minus = Button(frame, text='-', height=4, width=9, font=35, command=lambda: button_press('-'))
+minus = Button(frame, text='-', height=4, width=9, font=35, bg="yellow2", command=lambda: button_press('-'))
 minus.grid(row=2, column=3)
 
-multiply = Button(frame, text='×', height=4, width=9, font=35, command=lambda: button_press('*'))
+multiply = Button(frame, text='×', height=4, width=9, font=35, bg="yellow2", command=lambda: button_press('*'))
 multiply.grid(row=3, column=2)
 
-divide = Button(frame, text='÷', height=4, width=9, font=35, command=lambda: button_press('/'))
+divide = Button(frame, text='÷', height=4, width=9, font=35, bg="yellow2", command=lambda: button_press('/'))
 divide.grid(row=3, column=1)
 
 # create equals
 
-equal = Button(window, text='=', height=4, width=40, font=35, bg="rosybrown", command=equals)
+equal = Button(window, text='=', height=4, width=40, font=35, bg="brown1", command=equals)
 equal.pack()
 
 # create decimal
 
-decimal = Button(frame, text='.', height=4, width=9, font=35, command=lambda: button_press('.'))
+decimal = Button(frame, text='.',  height=4, width=9, font=35, bg="yellow2", command=lambda: button_press('.'))
 decimal.grid(row=3, column=3)
 
 # create clear button
 
-clear = Button(frame, text='Reset', height=4, width=9, font=35, command=clear)
+clear = Button(frame, text='Reset', height=4, width=9, font=35, bg="greenyellow", activebackground="darkolivegreen3", command=clear)
 clear.grid(row=0, column=3)
 
 window.mainloop()
