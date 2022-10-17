@@ -11,13 +11,16 @@ from turtle import color # import the tkinter library
 def button_press(num):   # defining each button press
     global equation_text
 
+
     equation_text = equation_text + str(num)
 
     equation_label.set(equation_text)
 
 def equals():   # this block checks for the button_press(equals)
-    
     global equation_text
+
+    equation_text = equation_text.replace("÷","/")
+    equation_text = equation_text.replace("×","*")
 
     try:  # try is used in try...expect blocks. It defines a block of ode test if it contains any errors.
           # You can define different blocks for different errpr types, and blocks to execute if nothing went wrong.
@@ -33,7 +36,7 @@ def equals():   # this block checks for the button_press(equals)
 
         equation_text = ""
 
-    except ZeroDivisionError:   # Check for division by zero
+    except ZeroDivisionError: # Check for division by zero
 
         equation_label.set("arithmetic error")
 
@@ -47,6 +50,7 @@ def clear(): # Clears the equation_label for the next calculation
     equation_label.set("")
 
     equation_text = " "
+
 
 window = Tk()
 window.title("Python Calculator") # Set the name of the window
@@ -103,10 +107,10 @@ plus.grid(row=1, column=3)
 minus = Button(frame, text='-', height=4, width=9, font=35, bg="yellow2", activebackground="#E3CF57", command=lambda: button_press('-'))
 minus.grid(row=2, column=3)
 
-multiply = Button(frame, text='×', height=4, width=9, font=35, bg="yellow2", activebackground="#E3CF57", command=lambda: button_press('*'))
+multiply = Button(frame, text='×', height=4, width=9, font=35, bg="yellow2", activebackground="#E3CF57", command=lambda: button_press('×'))
 multiply.grid(row=3, column=2)
 
-divide = Button(frame, text='÷', height=4, width=9, font=35, bg="yellow2", activebackground="#E3CF57", command=lambda: button_press('/'))
+divide = Button(frame, text='÷', height=4, width=9, font=35, bg="yellow2", activebackground="#E3CF57", command=lambda: button_press('÷'))
 divide.grid(row=3, column=1)
 
 # create equals
