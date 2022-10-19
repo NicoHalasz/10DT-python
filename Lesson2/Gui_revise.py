@@ -60,7 +60,7 @@ equation_text = "" # sets the equation to nothing when you first start up the ca
 
 equation_label = StringVar()
 
-label = Label(window, textvariable=equation_label, font=('console', 20), bg="springgreen3", width=40, height=2)
+label = Label(window, textvariable=equation_label, font=('console', 20), bg="springgreen3", width=23, height=2)
 label.pack()
 
 frame = Frame(window)
@@ -114,8 +114,8 @@ divide.grid(row=3, column=1)
 
 # create equals
 
-equal = Button(frame, text='=', height=4, width=39, font=35, bg="brown1", activebackground="coral2", command=equals)
-equal.grid(row=4, column=0, columnspan=4)
+equal = Button(window, text='=', height=4, width=40, font=35, bg="brown1", activebackground="coral2", command=equals)
+equal.pack()
 
 # create decimal
 
