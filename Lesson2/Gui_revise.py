@@ -5,51 +5,50 @@
 # Python Calculator with GUI (Graphic User Interface)
 # ***************************************************
 
-from tkinter import * 
-from turtle import color # import the tkinter library
+from tkinter import * # import everything from the tkinter library
+from turtle import color # import the colours from the turtle library
 
-def button_press(num):   # defining each button press
+def button_press(num):   # defining what happenes when you press a button (exluding equals and clear)
     global equation_text
 
+    equation_text = equation_text + str(num) # adds the button input onto the equation
 
-    equation_text = equation_text + str(num)
+    equation_label.set(equation_text) # sets the label to the new equation 
 
-    equation_label.set(equation_text)
-
-def equals():   # this block checks for the button_press(equals)
+def equals(): # defining what happenes when you press the equals button
     global equation_text
 
-    equation_text = equation_text.replace("÷","/")
-    equation_text = equation_text.replace("×","*")
+    equation_text = equation_text.replace("÷","/") # replaces any ÷ with a / for the equation
+    equation_text = equation_text.replace("×","*") # replaces any × with a * for the equation
 
-    try:  # try is used in try...expect blocks. It defines a block of ode test if it contains any errors.
+    try:  # try is used in try...expect blocks. It defines a block of ocde test if it contains any errors.
           # You can define different blocks for different errpr types, and blocks to execute if nothing went wrong.
-        total = str(eval(equation_text))
+        total = str(eval(equation_text)) # sets the variable "total" to the completed equation
 
-        equation_label.set(total)
+        equation_label.set(total) # sets the label to the variable "total" which is storing the completed equation
 
-        equation_text = total
+        equation_text = total # sets the equation to the variable "total" which is storing the completed equation
 
-    except SyntaxError: # Check for syntax error
+    except SyntaxError: # check for syntax error
 
-        equation_label.set("syntax error")
+        equation_label.set("Order does not make sense") # displays "Order does not make sense" if there is a syntax error
 
-        equation_text = ""
+        equation_text = "" # resets equation if there is a syntax error
 
-    except ZeroDivisionError: # Check for division by zero
+    except ZeroDivisionError: # checks for division by zero
 
-        equation_label.set("arithmetic error")
+        equation_label.set("Cannot divide by 0") # displays "Cannot divide by 0" if the user divides by zero
 
-        equation_text = ""
+        equation_text = "" # resets the equation if the user divides by 0
 
 
-def clear(): # Clears the equation_label for the next calculation
+def clear(): # defining wht happens when you press the clear/reset button
     global equation_label
     global equation_text
 
-    equation_label.set("")
+    equation_label.set("") # sets the label to nothing
 
-    equation_text = " "
+    equation_text = " " # sets the equation to nothing
 
 
 window = Tk()
@@ -57,11 +56,11 @@ window.title("Python Calculator") # Set the name of the window
 window.geometry("400x500") # Set the size of the window
 window.configure(bg="royalblue4") # Set the background colour of the window
 
-equation_text = ""
+equation_text = "" # sets the equation to nothing when you first start up the calculator
 
 equation_label = StringVar()
 
-label = Label(window, textvariable=equation_label, font=('console', 20), bg="springgreen3", width=23, height=2)
+label = Label(window, textvariable=equation_label, font=('console', 20), bg="springgreen3", width=40, height=2)
 label.pack()
 
 frame = Frame(window)
@@ -115,8 +114,8 @@ divide.grid(row=3, column=1)
 
 # create equals
 
-equal = Button(window, text='=', height=4, width=40, font=35, bg="brown1", activebackground="coral2", command=equals)
-equal.pack()
+equal = Button(frame, text='=', height=4, width=39, font=35, bg="brown1", activebackground="coral2", command=equals)
+equal.grid(row=4, column=0, columnspan=4)
 
 # create decimal
 
